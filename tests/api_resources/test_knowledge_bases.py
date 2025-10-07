@@ -304,6 +304,7 @@ class TestKnowledgeBases:
     def test_method_wait_for_database_failed_state(self, client: Gradient) -> None:
         """Test wait_for_database with failed database status."""
         from unittest.mock import Mock
+
         from gradient.resources.knowledge_bases import KnowledgeBaseDatabaseError
         
         def mock_retrieve(uuid, **kwargs):
@@ -324,6 +325,7 @@ class TestKnowledgeBases:
     def test_method_wait_for_database_timeout(self, client: Gradient) -> None:
         """Test wait_for_database with timeout."""
         from unittest.mock import Mock
+
         from gradient._exceptions import APITimeoutError
         
         def mock_retrieve(uuid, **kwargs):
@@ -344,6 +346,7 @@ class TestKnowledgeBases:
     def test_method_wait_for_database_decommissioned(self, client: Gradient) -> None:
         """Test wait_for_database with DECOMMISSIONED status."""
         from unittest.mock import Mock
+
         from gradient.resources.knowledge_bases import KnowledgeBaseDatabaseError
         
         def mock_retrieve(uuid, **kwargs):
@@ -655,6 +658,7 @@ class TestAsyncKnowledgeBases:
     async def test_method_wait_for_database_failed_state(self, async_client: AsyncGradient) -> None:
         """Test async wait_for_database with failed database status."""
         from unittest.mock import Mock
+
         from gradient.resources.knowledge_bases import KnowledgeBaseDatabaseError
         
         async def mock_retrieve(uuid, **kwargs):
@@ -675,6 +679,7 @@ class TestAsyncKnowledgeBases:
     async def test_method_wait_for_database_timeout(self, async_client: AsyncGradient) -> None:
         """Test async wait_for_database with timeout."""
         from unittest.mock import Mock
+
         from gradient._exceptions import APITimeoutError
         
         async def mock_retrieve(uuid, **kwargs):
@@ -695,6 +700,7 @@ class TestAsyncKnowledgeBases:
     async def test_method_wait_for_database_decommissioned(self, async_client: AsyncGradient) -> None:
         """Test async wait_for_database with DECOMMISSIONED status."""
         from unittest.mock import Mock
+
         from gradient.resources.knowledge_bases import KnowledgeBaseDatabaseError
         
         async def mock_retrieve(uuid, **kwargs):

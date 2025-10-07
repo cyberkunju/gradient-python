@@ -19,7 +19,6 @@ from ..._response import (
     async_to_raw_response_wrapper,
     async_to_streamed_response_wrapper,
 )
-from ..._exceptions import APITimeoutError
 from .data_sources import (
     DataSourcesResource,
     AsyncDataSourcesResource,
@@ -28,6 +27,7 @@ from .data_sources import (
     DataSourcesResourceWithStreamingResponse,
     AsyncDataSourcesResourceWithStreamingResponse,
 )
+from ..._exceptions import APITimeoutError
 from .indexing_jobs import (
     IndexingJobsResource,
     AsyncIndexingJobsResource,
